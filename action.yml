@@ -1,0 +1,12 @@
+name: check-nixpkgs-go
+description: Fail when go.mod requires a newer Go than nixpkgs stable ships
+inputs:
+  go-mod-file:
+    description: Path to the go.mod file to check
+    default: go.mod
+  token:
+    description: Token for reading go.mod through the Gitea API when the repository isn't checked out
+    default: ${{ github.token }}
+runs:
+  using: node24
+  main: index.mjs
