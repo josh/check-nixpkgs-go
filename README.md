@@ -9,7 +9,7 @@ jobs:
   nixpkgs-go:
     runs-on: ubuntu-slim-amd64
     steps:
-      - uses: josh/check-nixpkgs-go@v1
+      - uses: josh/check-nixpkgs-go@v1.0.0
 ```
 
 No checkout or Go toolchain is needed. If `go.mod` isn't in the workspace,
